@@ -223,6 +223,57 @@ class _HomeState extends State<Home> {
                     Divider(
                       color: Colors.brown,
                       height: 30.0,
+                    ),
+                    SizedBox(height: 10.0),
+                    // Action Buttons
+                    Row(
+                      children: <Widget>[
+                        IconButton(
+                          icon: Icon(Icons.reply),
+                          color: Colors.grey.withOpacity(0.4),
+                          iconSize: 25.0,
+                          onPressed: () {},
+                        ),
+                        Text(
+                          "1.7k",
+                          style: TextStyle(
+                            color: Colors.grey
+                          ),
+                        ),
+                        SizedBox(width: 5.0),
+                        IconButton(
+                          icon: Icon(Icons.comment),
+                          color: Colors.grey.withOpacity(0.4),
+                          iconSize: 25.0,
+                          onPressed: () {},
+                        ),
+                        Text(
+                          "325",
+                          style: TextStyle(
+                            color: Colors.grey
+                          ),
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width - 220,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              IconButton(
+                                icon: Icon(Icons.favorite),
+                                color: Colors.red,
+                                iconSize: 25.0,
+                                onPressed: () {},
+                              ),
+                              Text(
+                                "2.3k",
+                                style: TextStyle(
+                                  color: Colors.grey
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
                     )
                   ],
                 ),
