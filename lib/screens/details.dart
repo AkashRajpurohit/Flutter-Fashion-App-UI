@@ -163,7 +163,24 @@ class _DetailsPageState extends State<DetailsPage> {
                 ),
               ),
             ),
-          )
+          ),
+          Positioned(
+            left: 20.0,
+            top: 40.0,
+            child: Icon(Icons.arrow_back_ios, color: Colors.white, size: 28.0)
+          ),
+          Positioned(
+            left: (MediaQuery.of(context).size.width / 2) - 10,
+            top: 40.0,
+            child: Text(
+              '1/3',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 20.0
+              ),
+            )
+          ),
         ],
       ),
     );
