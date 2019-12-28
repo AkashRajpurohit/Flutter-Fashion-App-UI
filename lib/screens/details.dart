@@ -130,6 +130,39 @@ class _DetailsPageState extends State<DetailsPage> {
                 ),
               ),
             ),
+          ),
+          Positioned(
+            left: 50.0,
+            top: MediaQuery.of(context).size.height / 2,
+            child: Container(
+              height: 35.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: Colors.black.withOpacity(0.4)
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Center(
+                  child: Row(
+                    children: <Widget>[
+                      Text(
+                        'LAMINATED',
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      SizedBox(width: 5.0),
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        color: Colors.white
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
           )
         ],
       ),
