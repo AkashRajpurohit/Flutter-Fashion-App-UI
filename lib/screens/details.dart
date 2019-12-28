@@ -88,6 +88,13 @@ class _DetailsPageState extends State<DetailsPage> {
                         )
                       ],
                     ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                      child: Divider(
+                        color: Colors.brown.withOpacity(0.5),
+                        height: 10.0,
+                      ),
+                    )
                   ],
                 ),
               ),
