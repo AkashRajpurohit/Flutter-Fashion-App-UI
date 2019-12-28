@@ -55,7 +55,6 @@ class _HomeState extends State<Home> {
               borderRadius: BorderRadius.circular(15.0),
               elevation: 4.0,
               child: Container(
-                height: 450.0,
                 width: double.infinity,
                 padding: EdgeInsets.all(15.0),
                 decoration: BoxDecoration(
@@ -219,6 +218,11 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ],
+                    ),
+                    // Divider
+                    Divider(
+                      color: Colors.brown,
+                      height: 30.0,
                     )
                   ],
                 ),
