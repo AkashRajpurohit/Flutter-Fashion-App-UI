@@ -33,7 +33,7 @@ class _DetailsPageState extends State<DetailsPage> {
               borderRadius: BorderRadius.circular(10.0),
               elevation: 3.0,
               child: Container(
-                height: 200.0,
+                height: 210.0,
                 width: MediaQuery.of(context).size.width - 30.0,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
@@ -93,6 +93,37 @@ class _DetailsPageState extends State<DetailsPage> {
                       child: Divider(
                         color: Colors.brown.withOpacity(0.5),
                         height: 10.0,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 15.0),
+                      child: Container(
+                        width: double.infinity,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text(
+                              "\$6500",
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.brown
+                              ),
+                            ),
+                            FloatingActionButton(
+                              elevation: 0.0,
+                              onPressed: () {},
+                              child: Center(
+                                child: Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: Colors.white,
+                                  size: 20.0,
+                                ),
+                              ),
+                              backgroundColor: Colors.brown,
+                              mini: true,
+                            )
+                          ],
+                        ),
                       ),
                     )
                   ],
