@@ -64,6 +64,7 @@ class _HomeState extends State<Home> {
                 ),
                 child: Column(
                   children: <Widget>[
+                    // Header
                     Row(
                       children: <Widget>[
                         Container(
@@ -114,6 +115,7 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                     SizedBox(height: 15.0),
+                    // Description
                     Text(
                       "This official website features a ribbed knit zipper jacket that is modern and stylish. It looks very temperament and is recommend to friends.",
                       style: TextStyle(
@@ -121,6 +123,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     SizedBox(height: 10.0),
+                    // Grid Images
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -173,6 +176,49 @@ class _HomeState extends State<Home> {
                           ],
                         )
                       ]
+                    ),
+                    SizedBox(height: 10.0),
+                    // Chips
+                    Row(
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            color: Colors.brown.withOpacity(0.2),
+                          ),
+                          child: Center(
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
+                              child: Text(
+                                '# Louis vuitton',
+                                style: TextStyle(
+                                  fontSize: 12.0,
+                                  color: Colors.brown
+                                )
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 10.0),
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            color: Colors.brown.withOpacity(0.2),
+                          ),
+                          child: Center(
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
+                              child: Text(
+                                '# Chloe',
+                                style: TextStyle(
+                                  fontSize: 12.0,
+                                  color: Colors.brown
+                                )
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     )
                   ],
                 ),
