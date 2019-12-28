@@ -112,7 +112,14 @@ class _HomeState extends State<Home> {
                           ),
                         )
                       ],
-                    )
+                    ),
+                    SizedBox(height: 15.0),
+                    Text(
+                      "This official website features a ribbed knit zipper jacket that is modern and stylish. It looks very temperament and is recommend to friends.",
+                      style: TextStyle(
+                        color: Colors.grey,
+                      ),
+                    ),
                   ],
                 ),
               ),
