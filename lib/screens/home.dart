@@ -1,3 +1,4 @@
+import 'package:fashion_app_ui/screens/details.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -6,7 +7,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
-
   TabController _controller;
 
   @override
@@ -29,10 +29,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         title: Text(
           'Discovery',
           style: TextStyle(
-            fontSize: 25.0,
-            fontWeight: FontWeight.bold,
-            color: Colors.black
-          ),
+              fontSize: 25.0, fontWeight: FontWeight.bold, color: Colors.black),
         ),
         elevation: 0.0,
         backgroundColor: Colors.transparent,
@@ -51,9 +48,13 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           controller: _controller,
           indicatorColor: Colors.transparent,
           tabs: <Widget>[
-            Tab(icon: Icon(Icons.play_circle_outline, color: Colors.grey, size: 25.0)),
+            Tab(
+                icon: Icon(Icons.play_circle_outline,
+                    color: Colors.grey, size: 25.0)),
             Tab(icon: Icon(Icons.navigation, color: Colors.grey, size: 25.0)),
-            Tab(icon: Icon(Icons.supervised_user_circle, color: Colors.grey, size: 25.0)),
+            Tab(
+                icon: Icon(Icons.supervised_user_circle,
+                    color: Colors.grey, size: 25.0)),
           ],
         ),
       ),
@@ -99,9 +100,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30.0),
                             image: DecorationImage(
-                              image: AssetImage("assets/emilia-1.jpeg"),
-                              fit: BoxFit.cover
-                            ),
+                                image: AssetImage("assets/emilia-1.jpeg"),
+                                fit: BoxFit.cover),
                           ),
                         ),
                         SizedBox(width: 10.0),
@@ -124,9 +124,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                   Text(
                                     "34 mins ago",
                                     style: TextStyle(
-                                      fontSize: 12.0,
-                                      color: Colors.grey
-                                    ),
+                                        fontSize: 12.0, color: Colors.grey),
                                   ),
                                 ],
                               ),
@@ -151,58 +149,83 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                     SizedBox(height: 10.0),
                     // Grid Images
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Hero(
-                          tag: "assets/emilia-2.jpeg",
-                          child: Container(
-                            height: 200.0,
-                            width: (MediaQuery.of(context).size.width - 60.0) / 2,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10.0),
-                              image: DecorationImage(
-                                image: AssetImage("assets/emilia-2.jpeg"),
-                                fit: BoxFit.cover
-                              )
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          InkWell(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => DetailsPage(
+                                      heroTag: "assets/emilia-2.jpeg")));
+                            },
+                            child: Hero(
+                              tag: "assets/emilia-2.jpeg",
+                              child: Container(
+                                height: 200.0,
+                                width:
+                                    (MediaQuery.of(context).size.width - 60.0) /
+                                        2,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    image: DecorationImage(
+                                        image:
+                                            AssetImage("assets/emilia-2.jpeg"),
+                                        fit: BoxFit.cover)),
+                              ),
                             ),
                           ),
-                        ),
-                        SizedBox(width: 10.0),
-                        Column(
-                          children: <Widget>[
-                            Hero(
-                              tag: "assets/emilia-3.jpeg",
-                              child: Container(
-                                height: 95.0,
-                                width: (MediaQuery.of(context).size.width - 80.0) / 2,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                  image: DecorationImage(
-                                    image: AssetImage("assets/emilia-3.jpeg"),
-                                    fit: BoxFit.cover
-                                  )
+                          SizedBox(width: 10.0),
+                          Column(
+                            children: <Widget>[
+                              InkWell(
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => DetailsPage(
+                                          heroTag: "assets/emilia-3.jpeg")));
+                                },
+                                child: Hero(
+                                  tag: "assets/emilia-3.jpeg",
+                                  child: Container(
+                                    height: 95.0,
+                                    width: (MediaQuery.of(context).size.width -
+                                            80.0) /
+                                        2,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "assets/emilia-3.jpeg"),
+                                            fit: BoxFit.cover)),
+                                  ),
                                 ),
                               ),
-                            ),
-                            SizedBox(height: 10.0),
-                            Hero(
-                              tag: "assets/emilia-4.jpeg",
-                              child: Container(
-                                height: 95.0,
-                                width: (MediaQuery.of(context).size.width - 80.0) / 2,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                  image: DecorationImage(
-                                    image: AssetImage("assets/emilia-4.jpeg"),
-                                    fit: BoxFit.cover
-                                  )
+                              SizedBox(height: 10.0),
+                              InkWell(
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => DetailsPage(
+                                          heroTag: "assets/emilia-4.jpeg")));
+                                },
+                                child: Hero(
+                                  tag: "assets/emilia-4.jpeg",
+                                  child: Container(
+                                    height: 95.0,
+                                    width: (MediaQuery.of(context).size.width -
+                                            80.0) /
+                                        2,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "assets/emilia-4.jpeg"),
+                                            fit: BoxFit.cover)),
+                                  ),
                                 ),
                               ),
-                              ),
-                          ],
-                        )
-                      ]
-                    ),
+                            ],
+                          )
+                        ]),
                     SizedBox(height: 10.0),
                     // Chips
                     Row(
@@ -214,14 +237,11 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           ),
                           child: Center(
                             child: Padding(
-                              padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
-                              child: Text(
-                                '# Louis vuitton',
-                                style: TextStyle(
-                                  fontSize: 12.0,
-                                  color: Colors.brown
-                                )
-                              ),
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 5.0, horizontal: 10.0),
+                              child: Text('# Louis vuitton',
+                                  style: TextStyle(
+                                      fontSize: 12.0, color: Colors.brown)),
                             ),
                           ),
                         ),
@@ -233,14 +253,11 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           ),
                           child: Center(
                             child: Padding(
-                              padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
-                              child: Text(
-                                '# Chloe',
-                                style: TextStyle(
-                                  fontSize: 12.0,
-                                  color: Colors.brown
-                                )
-                              ),
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 5.0, horizontal: 10.0),
+                              child: Text('# Chloe',
+                                  style: TextStyle(
+                                      fontSize: 12.0, color: Colors.brown)),
                             ),
                           ),
                         ),
@@ -263,9 +280,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         ),
                         Text(
                           "1.7k",
-                          style: TextStyle(
-                            color: Colors.grey
-                          ),
+                          style: TextStyle(color: Colors.grey),
                         ),
                         SizedBox(width: 5.0),
                         IconButton(
@@ -276,9 +291,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         ),
                         Text(
                           "325",
-                          style: TextStyle(
-                            color: Colors.grey
-                          ),
+                          style: TextStyle(color: Colors.grey),
                         ),
                         Container(
                           width: MediaQuery.of(context).size.width - 220,
@@ -293,9 +306,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                               ),
                               Text(
                                 "2.3k",
-                                style: TextStyle(
-                                  color: Colors.grey
-                                ),
+                                style: TextStyle(color: Colors.grey),
                               ),
                             ],
                           ),
@@ -325,9 +336,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(37.5),
                   image: DecorationImage(
-                    image: AssetImage(imgPath),
-                    fit: BoxFit.cover
-                  ),
+                      image: AssetImage(imgPath), fit: BoxFit.cover),
                 ),
               ),
               Positioned(
@@ -339,9 +348,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12.5),
                     image: DecorationImage(
-                      image: AssetImage(logo),
-                      fit: BoxFit.cover
-                    ),
+                        image: AssetImage(logo), fit: BoxFit.cover),
                   ),
                 ),
               )
@@ -358,10 +365,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             child: Center(
               child: Text(
                 "Follow",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14.0
-                ),
+                style: TextStyle(color: Colors.white, fontSize: 14.0),
               ),
             ),
           )
