@@ -38,12 +38,12 @@ class _HomeState extends State<Home> {
               scrollDirection: Axis.horizontal,
               padding: EdgeInsets.all(10.0),
               children: <Widget>[
-                _listItem("https://s3.amazonaws.com/uifaces/faces/twitter/marklamb/128.jpg", "http://lorempixel.com/640/480"),
-                _listItem("https://s3.amazonaws.com/uifaces/faces/twitter/dhooyenga/128.jpg", "http://lorempixel.com/640/480/business"),
-                _listItem("https://s3.amazonaws.com/uifaces/faces/twitter/skkirilov/128.jpg", "http://lorempixel.com/640/480/fashion"),
-                _listItem("https://s3.amazonaws.com/uifaces/faces/twitter/joreira/128.jpg", "http://lorempixel.com/640/480/city"),
-                _listItem("https://s3.amazonaws.com/uifaces/faces/twitter/sethlouey/128.jpg", "http://lorempixel.com/640/480/cats"),
-                _listItem("https://s3.amazonaws.com/uifaces/faces/twitter/russell_baylis/128.jpg", "http://lorempixel.com/640/480/technics")
+                _listItem("assets/model-1.jpeg", "assets/brand-1.jpeg"),
+                _listItem("assets/model-2.jpeg", "assets/brand-2.jpeg"),
+                _listItem("assets/model-3.jpeg", "assets/brand-3.jpeg"),
+                _listItem("assets/model-4.jpeg", "assets/brand-4.jpeg"),
+                _listItem("assets/model-5.jpeg", "assets/brand-5.jpeg"),
+                _listItem("assets/model-6.jpeg", "assets/brand-6.jpeg"),
               ],
             ),
           )
@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(37.5),
                   image: DecorationImage(
-                    image: NetworkImage(imgPath),
+                    image: AssetImage(imgPath),
                     fit: BoxFit.cover
                   ),
                 ),
@@ -79,7 +79,7 @@ class _HomeState extends State<Home> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12.5),
                     image: DecorationImage(
-                      image: NetworkImage(logo),
+                      image: AssetImage(logo),
                       fit: BoxFit.cover
                     ),
                   ),
