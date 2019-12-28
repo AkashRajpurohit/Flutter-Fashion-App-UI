@@ -120,6 +120,60 @@ class _HomeState extends State<Home> {
                         color: Colors.grey,
                       ),
                     ),
+                    SizedBox(height: 10.0),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Hero(
+                          tag: "assets/emilia-2.jpeg",
+                          child: Container(
+                            height: 200.0,
+                            width: (MediaQuery.of(context).size.width - 60.0) / 2,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              image: DecorationImage(
+                                image: AssetImage("assets/emilia-2.jpeg"),
+                                fit: BoxFit.cover
+                              )
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 10.0),
+                        Column(
+                          children: <Widget>[
+                            Hero(
+                              tag: "assets/emilia-3.jpeg",
+                              child: Container(
+                                height: 95.0,
+                                width: (MediaQuery.of(context).size.width - 80.0) / 2,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/emilia-3.jpeg"),
+                                    fit: BoxFit.cover
+                                  )
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 10.0),
+                            Hero(
+                              tag: "assets/emilia-4.jpeg",
+                              child: Container(
+                                height: 95.0,
+                                width: (MediaQuery.of(context).size.width - 80.0) / 2,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/emilia-4.jpeg"),
+                                    fit: BoxFit.cover
+                                  )
+                                ),
+                              ),
+                              ),
+                          ],
+                        )
+                      ]
+                    )
                   ],
                 ),
               ),
