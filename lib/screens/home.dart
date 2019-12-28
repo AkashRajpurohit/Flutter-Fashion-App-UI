@@ -5,7 +5,22 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
+
+  TabController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = new TabController(vsync: this, length: 3);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,6 +44,18 @@ class _HomeState extends State<Home> {
             iconSize: 30.0,
           )
         ],
+      ),
+      bottomNavigationBar: Material(
+        color: Colors.white,
+        child: TabBar(
+          controller: _controller,
+          indicatorColor: Colors.transparent,
+          tabs: <Widget>[
+            Tab(icon: Icon(Icons.play_circle_outline, color: Colors.grey, size: 25.0)),
+            Tab(icon: Icon(Icons.navigation, color: Colors.grey, size: 25.0)),
+            Tab(icon: Icon(Icons.supervised_user_circle, color: Colors.grey, size: 25.0)),
+          ],
+        ),
       ),
       body: ListView(
         padding: EdgeInsets.symmetric(vertical: 15.0),
