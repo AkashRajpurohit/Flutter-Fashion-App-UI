@@ -62,6 +62,59 @@ class _HomeState extends State<Home> {
                   borderRadius: BorderRadius.circular(15.0),
                   color: Colors.white,
                 ),
+                child: Column(
+                  children: <Widget>[
+                    Row(
+                      children: <Widget>[
+                        Container(
+                          height: 60.0,
+                          width: 60.0,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30.0),
+                            image: DecorationImage(
+                              image: AssetImage("assets/emilia-1.jpeg"),
+                              fit: BoxFit.cover
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 10.0),
+                        Container(
+                          width: MediaQuery.of(context).size.width - 130.0,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    "Emilia",
+                                    style: TextStyle(
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(height: 5.0),
+                                  Text(
+                                    "34 mins ago",
+                                    style: TextStyle(
+                                      fontSize: 12.0,
+                                      color: Colors.grey
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              IconButton(
+                                icon: Icon(Icons.more_vert),
+                                color: Colors.grey,
+                                onPressed: () {},
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
           ),
