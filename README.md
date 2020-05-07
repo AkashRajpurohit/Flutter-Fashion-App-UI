@@ -6,13 +6,11 @@ Inspiration from a design made by [初夏 Ruby](https://dribbble.com/shots/57732
 
 # App Screenshots
 
-Main Screen                
-:-------------------------:
-![Main Screen](./mockups/main.png)  |
+Main Screen                | Details Page
+:-------------------------:|:---------------------:
+![Main Screen](./mockups/main.png)  | ![Details Page](./mockups/details.png)
 
-Details Page                
-:-------------------------:
-![Details Page](./mockups/details.png)  |
+
 
 # Donate
 > If you found this project helpful or you learned something from the source code and want to thank me, consider buying me a cup of :coffee::heart:
